@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'nippo/cli'
+
+Nippo::Cli.start
