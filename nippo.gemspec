@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["hrysd22@gmail.com"]
   spec.description   = %q{Generate nippo.}
   spec.summary       = %q{Generate nippo.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/hrysd/nippo"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
