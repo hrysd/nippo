@@ -55,14 +55,14 @@ module Nippo
           open(config.daily_file, 'w') do |f|
             f.puts "# #{config.title}"
             f.puts "\n"
-            f.puts "## #{TimeHelper.formated_date}"
+            f.puts "## #{TimeHelper.formatted_date}"
           end
         end
 
         def insert_daily_nippo
           open(config.daily_file, 'a+') do |f|
             f.puts "\n"
-            f.puts "## #{TimeHelper.formated_date}"
+            f.puts "## #{TimeHelper.formatted_date}"
             f.puts "\n"
           end
         end
