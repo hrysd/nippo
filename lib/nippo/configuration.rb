@@ -24,7 +24,7 @@ module Nippo
     end
 
     def daily_dir
-      nippo_root_dir + TimeHelper.formated_month
+      nippo_root_dir + TimeHelper.formatted_month
     end
 
     def daily_file
@@ -32,7 +32,7 @@ module Nippo
     end
 
     def weekly_dir
-      nippo_root_dir + TimeHelper.formated_month + 'weekly.md'
+      nippo_root_dir + TimeHelper.formatted_month + 'weekly.md'
     end
 
     private

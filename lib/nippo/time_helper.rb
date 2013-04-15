@@ -6,11 +6,11 @@ module Nippo
       Date.today
     end
 
-    def self.formated_month
+    def self.formatted_month
       today.strftime("%B").downcase
     end
 
-    def self.formated_date
+    def self.formatted_date
       today.strftime('%Y/%m/%d')
     end
   end
