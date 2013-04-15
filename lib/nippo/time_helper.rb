@@ -11,7 +11,7 @@ module Nippo
     end
 
     def self.formated_date
-      today.strftime
+      today.strftime('%Y/%m/%d')
     end
   end
 end
