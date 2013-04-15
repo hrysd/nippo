@@ -10,13 +10,13 @@ module Nippo
 
     desc 'config', 'Edit config file'
     def config
-      exec editor, Configuration.config_file
+      exec(editor, Configuration.config_file)
     end
 
     desc 'daily', 'Wirte daily Nippo.'
     def daily
       Nippo::Generator.write_daily_nippo
-      exec editor, Nippo::Generator.config.daily_file.to_s
+      exec(editor, Nippo::Generator.config.daily_file.to_s)
     end
 
     desc 'weekly', 'Write weekly Nippo.'
