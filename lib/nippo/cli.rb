@@ -20,6 +20,11 @@ module Nippo
       exec(editor, Nippo::Generator.config.daily_file.to_s)
     end
 
+    desc 'move', 'Move to nippo root dir'
+    def move
+      exec('cd', config.root_dir)
+    end
+
     private
       def editor
         ENV['EDITOR'] or raise 'Could not find $EDITOR'
