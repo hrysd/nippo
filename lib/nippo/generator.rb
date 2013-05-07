@@ -7,7 +7,7 @@ module Nippo
   class Generator
     class << self
       def setup(title, current_dir)
-        unless Configuration.file.exist?
+        unless File.exist?(Configuration.file)
           config_hash = {
             title: title,
             root_dir: current_dir
