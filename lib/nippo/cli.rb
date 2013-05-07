@@ -16,8 +16,8 @@ module Nippo
 
     desc 'daily', 'Wirte daily Nippo.'
     def daily
-      Nippo::Generator.write_daily_nippo(config)
-      exec(editor, Nippo::Generator.config.daily_file.to_s)
+      Nippo::Generator.write_daily_nippo(configuration)
+      exec(editor, configuration.daily_file)
     end
 
     private
@@ -50,7 +50,7 @@ module Nippo
         Dir.pwd
       end
 
-      def config
+      def configuration
         Configuration.new
       end
   end
