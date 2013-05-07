@@ -1,4 +1,4 @@
-require 'pathname'
+require 'yaml'
 require_relative 'time_helper'
 
 module Nippo
@@ -8,11 +8,11 @@ module Nippo
 
     class << self
       def dir
-        Pathname.new(ENV['HOME']) + '.nippo'
+        File.join(ENV['HOME'], '.nippo')
       end
 
       def file
-        dir + 'config.yml'
+        File.join(dir, 'config.yml')
       end
     end
 
@@ -24,20 +24,11 @@ module Nippo
     end
 
     def daily_dir
-      nippo_root_dir + TimeHelper.formatted_month
+      File.join(self.root_dir, TimeHelper.formatted_month)
     end
 
     def daily_file
-      daily_dir + 'daily.md'
+      File.join(daily_dir, 'daily.md')
     end
-
-    def weekly_dir
-      nippo_root_dir + TimeHelper.formatted_month + 'weekly.md'
-    end
-
-    private
-      def nippo_root_dir
-        Pathname.new(self.root_dir)
-      end
   end
 end

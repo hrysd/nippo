@@ -2,16 +2,16 @@ require 'active_support/time'
 
 module Nippo
   module TimeHelper
-    def self.today
-      Date.today
+    def self.now
+      Time.now
     end
 
     def self.formatted_month
-      today.strftime("%B").downcase
+      now.strftime('%B').downcase
     end
 
     def self.formatted_date
-      today.strftime('%Y/%m/%d')
+      now.strftime('%Y-%m-%d')
     end
   end
 end
